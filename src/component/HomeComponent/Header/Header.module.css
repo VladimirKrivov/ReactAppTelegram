@@ -1,0 +1,39 @@
+.headerInfo {
+  display: flex;
+  padding: 0 0 0 15px;
+  align-items: center;
+}
+
+.buttonCardNone {
+  transform: translateX(0) !important;
+}
+
+.cartButtonWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #ff4d00;
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+.cartButtonWrapper p {
+  margin: 0;
+  padding: 0;
+}
+
+.menuWrapper {
+  display: flex;
+  overflow-x: auto;
+  padding: 15px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

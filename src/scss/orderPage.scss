@@ -1,0 +1,146 @@
+@import "colors";
+
+.orderPage {
+  height: 100%;
+  min-height: 100%;
+  background-color: $backgroundPageGray;
+
+
+}
+
+.formInput {
+  padding: 20px 10px 10px 10px;
+  flex: 1 0 auto;
+
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    flex: 0 0 auto;
+    margin: 0 0 10px 0;
+  }
+  form {
+    flex: 1;
+    .inputGroup{
+      flex: 1;
+      min-height: 100%;
+      margin: 0 0 130px 0;
+      background-color: $backgroundPageGray;
+    }
+  }
+
+
+
+}
+
+
+
+.radioButtonWrapper {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  background-color: $greyColor;
+  border-radius: 30px;
+  box-shadow: $boxShadowColor;
+  padding: 5px;
+  //width: 100%;
+  .radioBtnLabel {
+    .radioBtn {
+      display: none;
+
+      &:checked {
+        background-color: white;
+      }
+
+      &:checked + label {
+        background-color: white;
+      }
+    }
+
+    margin: 0;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    background-color: $greyColor;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+
+    &:checked {
+      background-color: white;
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+.btnActive{
+  background-color: white !important;
+}
+
+//Кнопка "Перейти к оформлению заказа"
+.orderCompleteButtonWrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 0 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-top: solid 1px $greyColor;
+  z-index: 2;
+
+  .totalInfo {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0;
+
+      li {
+      }
+    }
+  }
+
+  .buttonOrder {
+    color: white;
+    background-color: $backgroundCartButton;
+
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-out;
+    margin: 0 0 20px 0;
+
+    &:disabled{
+      background-color: #9d470b;
+      color: grey;
+      cursor: default;
+      &:hover{
+        background-color: #9d470b;
+        color: grey;
+      }
+    }
+
+    &:hover {
+      background-color: $backgroundCartButtonHover;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.orderPage {
+  height: 100%;
+  min-height: 100%;
+  background-color: #F3F3F7;
+}
+
+.formInput {
+  padding: 20px 10px 10px 10px;
+  flex: 1 0 auto;
+}
+.formInput h1 {
+  font-size: 24px;
+  font-weight: 400;
+  flex: 0 0 auto;
+  margin: 0 0 10px 0;
+}
+.formInput form {
+  flex: 1;
+}
+.formInput form .inputGroup {
+  flex: 1;
+  min-height: 100%;
+  margin: 0 0 130px 0;
+  background-color: #F3F3F7;
+}
+
+.radioButtonWrapper {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  background-color: rgb(226, 226, 233);
+  border-radius: 30px;
+  box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+}
+.radioButtonWrapper .radioBtnLabel {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(226, 226, 233);
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+}
+.radioButtonWrapper .radioBtnLabel .radioBtn {
+  display: none;
+}
+.radioButtonWrapper .radioBtnLabel .radioBtn:checked {
+  background-color: white;
+}
+.radioButtonWrapper .radioBtnLabel .radioBtn:checked + label {
+  background-color: white;
+}
+.radioButtonWrapper .radioBtnLabel:checked {
+  background-color: white;
+}
+.radioButtonWrapper .radioBtnLabel:hover {
+  background-color: white;
+}
+
+.btnActive {
+  background-color: white !important;
+}
+
+.orderCompleteButtonWrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 0 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  border-top: solid 1px rgb(226, 226, 233);
+  z-index: 2;
+}
+.orderCompleteButtonWrapper .totalInfo {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.orderCompleteButtonWrapper .totalInfo p {
+  margin: 0;
+}
+.orderCompleteButtonWrapper .totalInfo ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+.orderCompleteButtonWrapper .buttonOrder {
+  color: white;
+  background-color: #FF6900;
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease-out;
+  margin: 0 0 20px 0;
+}
+.orderCompleteButtonWrapper .buttonOrder:disabled {
+  background-color: #9d470b;
+  color: grey;
+  cursor: default;
+}
+.orderCompleteButtonWrapper .buttonOrder:disabled:hover {
+  background-color: #9d470b;
+  color: grey;
+}
+.orderCompleteButtonWrapper .buttonOrder:hover {
+  background-color: #d56110;
+}
+
+/*# sourceMappingURL=orderPage.css.map */

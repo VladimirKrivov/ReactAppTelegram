@@ -1,0 +1,41 @@
+.cartEmptyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 10px 10px 10px;
+  min-height: 100%;
+  flex: 1;
+}
+.cartEmptyWrapper img {
+  display: flex;
+  width: 300px;
+}
+.cartEmptyWrapper h3 {
+  font-size: 20px;
+}
+.cartEmptyWrapper p {
+  text-align: center;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+.cartEmptyWrapper button {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #FF6900;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  margin: 20px 0 0 0;
+  padding: 0 20px 0 20px;
+}
+.cartEmptyWrapper button:hover {
+  background-color: #d56110;
+}
+
+/*# sourceMappingURL=StatusOrder.module.css.map */

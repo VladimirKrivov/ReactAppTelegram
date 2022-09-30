@@ -1,0 +1,43 @@
+//Карточка товара
+.card {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
+  border-bottom: solid 1px #d9d7d7;
+  cursor: pointer;
+
+  .cardInfo {
+    padding: 5px 0 0 10px;
+
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cardDescription {
+      opacity: 60%;
+      font-size: 14px;
+      padding: 5px 0 5px 0;
+      margin: 0;
+    }
+
+    .cardButton {
+      margin-top: 10px;
+      font-size: 15px;
+      color: rgb(209, 87, 0);
+      background-color: rgb(255, 240, 230);
+      border: none;
+      padding: 5px 30px 5px 30px;
+      border-radius: 15px;
+      transition: background-color 0.20s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(246, 210, 195);
+      }
+    }
+  }
+}

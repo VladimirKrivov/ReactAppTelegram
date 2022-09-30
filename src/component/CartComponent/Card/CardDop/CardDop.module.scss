@@ -1,0 +1,22 @@
+.dopItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 0 10px 0;
+  width: 100px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+
+  img {
+  }
+
+  h3 {
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+}

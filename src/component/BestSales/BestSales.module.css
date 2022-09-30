@@ -1,0 +1,16 @@
+.bestSaleWrapper {
+  margin: 10px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.bestSaleWrapper .bestSaleTitleWrapper h2 {
+  font-weight: 500;
+  margin: 0;
+}
+.bestSaleWrapper .bestSaleCardContent {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+/*# sourceMappingURL=BestSales.module.css.map */

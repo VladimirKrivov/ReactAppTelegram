@@ -1,0 +1,101 @@
+@import "../../../../scss/colors";
+
+//{/*Тотал всей корзины*/}
+
+.contentCard {
+  flex: 1;
+  overflow: auto;
+  flex-direction: column;
+  background-color: $backgroundPageGray;
+  text-decoration: none;
+  margin: 20px 0 10px 0;
+
+  .itemCardPrices {
+    background-color: $backgroundPage;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0 15px 10px 15px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+
+.cartAllTotal {
+  margin: 0 0 0px 0;
+  padding: 5px 10px 10px 10px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .dopItemList {
+
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+
+//{/*Кнопка оформить заказ (корзина)*/}
+.totalButtonWrapper {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 0 10px;
+
+  .totalInfo {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0 0;
+      li {
+      }
+    }
+  }
+
+  .buttonOrder {
+    position: relative;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $backgroundCartButton;
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    margin: 0 0 20px 0;
+
+    &:hover {
+      background-color: $backgroundCartButtonHover;
+    }
+
+    img {
+      position: absolute;
+      top: 17px;
+      right: 30px;
+
+    }
+  }
+}
