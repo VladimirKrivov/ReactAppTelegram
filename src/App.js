@@ -11,6 +11,8 @@ import FinishOrderPage from "./pages/FinishOrderPage";
 function App() {
     //State Категорий
     const [category, setCategory] = React.useState([]);
+    //State Доставки
+    const [delivery, setDelivery] = React.useState([]);
     //Имя страницы исходя из категории
     const [pageName, setPageName] = React.useState('');
     //State Продуктов
@@ -44,14 +46,16 @@ function App() {
     React.useEffect(() => {
         async function fetchData() {
             try {
-                const [itemsResponse, categoryItem, dopItemResponse] = await Promise.all([
+                const [itemsResponse, categoryItem, dopItemResponse, deliveryResponse] = await Promise.all([
                     axios.get('http://192.168.100.5:8080/allproduct'),
                     axios.get('http://192.168.100.5:8080/allcategory'),
                     axios.get('http://192.168.100.5:8080/allotherproduct'),
+                    axios.get('http://192.168.100.5:8080/get-delivery'),
                 ]);
                 setItems(itemsResponse.data);
                 setCategory(categoryItem.data);
                 setItemsDop(dopItemResponse.data);
+                setDelivery(deliveryResponse.data)
             } catch (error) {
                 alert('Ошибка при запросе данных');
                 console.error(error);
@@ -135,7 +139,8 @@ function App() {
                 onAddToLocalCart,
                 clickOfCategory,
                 bestSalesItem,
-                dopItem
+                dopItem,
+                delivery
 
             }}>
             <Routes>

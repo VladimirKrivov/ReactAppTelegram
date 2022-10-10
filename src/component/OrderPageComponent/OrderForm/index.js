@@ -5,9 +5,10 @@ import AppContext from "../../../context";
 import {useForm} from "react-hook-form";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import Card from "../../HomeComponent/Card";
 
 function OrderForm() {
-    const {localCart, allPrice, allCount, setLocalCart} = React.useContext(AppContext);
+    const {localCart, allPrice, allCount, setLocalCart, delivery} = React.useContext(AppContext);
     const [buttonState, setButtonState] = React.useState(false);
     const [orderStatus, setOrderStatus] = React.useState(true);
     const navigate = useNavigate();
@@ -20,14 +21,10 @@ function OrderForm() {
             products: localCart,
             allPrice: allPrice
         }
-        console.log(orderDto);
-        let testDto = {
-            ...data,
-            productsId: localCartId,
-            allPrice: allPrice
-        }
+
 
         fetchOrder(orderDto);
+
     }
 
 
@@ -115,16 +112,25 @@ function OrderForm() {
                             onChange={onChangeDelivery}
                         >
                             <div className="radioButtonWrapper">
-                                <FormControlLabel value="delivery"
-                                                  id="delivery"
-                                                  control={<Radio {...register("delivery")} className="radioBtn"/>}
-                                                  label="Доставка"
-                                                  className={'radioBtnLabel ' + (buttonState ? ' ' : 'btnActive')}/>
-                                <FormControlLabel value="order"
-                                                  id="order"
-                                                  control={<Radio {...register("delivery")} className="radioBtn"/>}
-                                                  label="Самовывоз"
-                                                  className={'radioBtnLabel ' + (buttonState ? 'btnActive' : ' ')}/>
+
+                                {delivery.map((item) => (
+                                    <FormControlLabel value={item.value}
+                                                      id={item.id}
+                                                      control={<Radio {...register("delivery")} className="radioBtn"/>}
+                                                      label={item.name}
+                                                      className={'radioBtnLabel ' + (buttonState ? ' ' : 'btnActive')}/>
+                                ))}
+
+                                {/*<FormControlLabel value="delivery"*/}
+                                {/*                  id="delivery"*/}
+                                {/*                  control={<Radio {...register("delivery")} className="radioBtn"/>}*/}
+                                {/*                  label="Доставка"*/}
+                                {/*                  className={'radioBtnLabel ' + (buttonState ? ' ' : 'btnActive')}/>*/}
+                                {/*<FormControlLabel value="order"*/}
+                                {/*                  id="order"*/}
+                                {/*                  control={<Radio {...register("delivery")} className="radioBtn"/>}*/}
+                                {/*                  label="Самовывоз"*/}
+                                {/*                  className={'radioBtnLabel ' + (buttonState ? 'btnActive' : ' ')}/>*/}
                             </div>
 
                         </RadioGroup>
